@@ -1,0 +1,313 @@
+body{
+    background-color:   #2a2a2a;
+    margin:         0%;
+    padding:        0%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+@font-face {    
+    font-family:    LucidaConsole;
+    src: url("Lucida Console Regular.eot");
+    src: url("Lucida Console Regular.ttf") format('truetype');
+    src: url("Lucida Console Regular.woff") format('woff');
+    src: url("Lucida Console Regular.woff2") format('woff2');
+}
+
+.kop {
+    background-color:   #669ff3;
+    width:          100%;
+    color:          white;
+    font-family:    LucidaConsole;
+    height:         69px;
+    font-size:      54px;
+    margin-block:   0px;
+    padding-top:    9px;
+    padding-left:   9px;
+    text-align:     left;
+}
+.kop span {
+    font-size:      25px;
+    float:          right;
+    padding-top:    17px;
+    padding-right:  30px;
+}
+
+.sidebar {/*In deze div zitten alle filters. text-align:center zorgt dat ze gecentreerd op de pagina staan.*/
+    color: white;
+    left:           12px;
+    z-index:        1;
+    width:          250px;
+    text-align:     center;
+    position:       absolute;
+    float: left;
+}
+
+.bigbox {/*In deze div zitten alle blokken. text-align:center zorgt dat ze gecentreerd op de pagina staan.*/
+    left: 240px;
+    position:       absolute;
+    text-align:     center;
+    right:          0px;
+    color:          white;
+}
+
+
+.blok{/*Kijk toch hoe mooi deze blokken zijn! Elk blok linkt naar een eigen pagina.*/
+    background-color:   white;      /*eigenlijk heeft elk blok een afbeelding*/
+    background-size: cover;         /*vult de hele achtergrond met de afbeelding, ongeacht zijn grootte*/
+    background-position: center;    /*centreert de afbeelding*/
+    box-shadow: inset 0 0 10px black;
+
+    position:       relative;
+
+    border-radius:  12px;           /*Ronde randen*/
+    width:          350px;
+    height:         230px;
+    margin-left:    25px;
+    margin-right:   25px;
+    margin-top:     20px;
+    margin-bottom:  20px;
+
+    text-align:     left;
+    
+    transition: 0.4s;
+
+    display: none;
+    
+}
+.blok.thin{
+    width:          316px;
+    height:         256px;
+    margin-left:    42px;
+    margin-right:   42px;
+    margin-top:     7px;
+    margin-bottom:  7px;
+}
+
+.blok:hover{
+    box-shadow: inset 0 0 30px white;
+    width:          390px;
+    margin-left:    5px;
+    margin-right:   5px;
+    transition: 0.4s;
+    
+}
+.blok.thin:hover{
+    margin-left:    15px;
+    margin-right:   15px;
+    width:          370px;
+}
+
+.show{
+    display:inline-block;
+}
+
+.tekst {
+
+    position:       absolute;
+
+    width:          93%;
+    
+    border-style:   solid;
+    border-width:   1px;
+    border-color:   #aaaaaa;
+    border-radius:  6px;
+    padding-left:   10px;
+    background-color: #2a2a2a;
+    color:          white;
+    font-family:    "arial";        /*Herzie later dit font*/
+    bottom:         0;
+    height:         30px;
+    margin:         7px;
+    padding-top:    10px;
+    
+}
+
+.filter {
+
+    cursor: pointer;
+    border-style:   solid;
+    border-width:   1px;
+    border-color:   #aaaaaa;
+    border-radius:  6px;
+    background-color: #2a2a2a;
+    color:          white;
+    font-family:    "arial";        /*Herzie later dit font*/
+    font-size:      15px;
+    bottom:         0;
+    height:         40px;
+    margin:         7px;
+    text-align:     center;
+    padding-left:   10px;
+    padding-right:  10px;
+
+    transition: 0.4s;
+    
+}
+.filter.active {
+    background-color:   #1a1a1a;
+    border-color:       inherit;
+    box-shadow:         inset 0 0 10px ;
+
+    transition: 0.2s;
+}
+
+.textbox{
+    color:   white;
+        position: absolute;
+        z-index: 1;
+        left: 0;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    font-size: 20px;
+
+    padding-left: 21vw;
+
+    left:    40px;
+    right: calc(52%);
+    margin-top:     40px;
+    display:        inline-block;  
+    text-align:     left;
+    
+}
+
+
+.preview{    
+    color: white;
+    background-color:   #444;      /*eigenlijk heeft elk blok een afbeelding*/
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 10px black;
+    border-radius:  12px;           /*Ronde randen*/
+    position: absolute;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    width:          50%;
+    right:          20px;
+    margin-left:    25px;
+    margin-top:     20px;
+    display:        inline-block;  
+    text-align:     left;
+    text-shadow: 0px 0px 6px black;
+    
+}
+
+.preview.about{
+    width: 20vw;
+    height: 20vw;
+}
+
+/*           ________
+            /       /
+     ______/   /   /_____
+    /      )             \_    ____
+ __/        )              \__/   /
+/     O     )       )            /
+\_          )            )      /
+/           )    )              \ 
+\__         )         )     __   \
+   \_      )              _/  \___\
+     \____\      \_______/
+           \______\
+
+*/
+
+@media (max-width: 670px) {
+    .kop {
+        text-align: left;
+        width: 110%;
+        
+    height:         100px;
+    }
+    
+    .kop span{
+        width: 100%;
+        font-size: 20px;
+        float: left;
+        padding-top: 17px;
+        padding-left: 9px;
+    }
+
+    .sidebar {/*In deze div zitten alle filters. text-align:center zorgt dat ze gecentreerd op de pagina staan.*/
+        width:          100%;
+        max-width: 95%;
+        padding-right: 12px;
+        text-align:     center;
+        position:       relative;
+    }
+
+    .bigbox {/*In deze div zitten alle blokken. text-align:center zorgt dat ze gecentreerd op de pagina staan.*/
+        left: -10px;
+        position: relative;
+        text-align:     center;
+        right: 0px;
+        color: white;
+    }
+
+    .textbox {
+        margin-top:     30px;
+        width:          97%;
+        max-width: 90%;
+        position: relative;
+        padding-left: 0vw;
+        left: 15px;
+    }
+    .preview {
+        margin-top:     20px;
+        width:          97%;
+        position:       relative;
+        
+    }
+
+    .preview.about {
+        width:  30vw;
+        height: 30vw;
+        box-shadow: inset 0 0 4px black;
+    }
+}
+
+/* Ik wil niet dat hyperlinks een streep eronder krijgen. Deze blokken voorkomen dit universeel. */
+a:link { text-decoration: none; color: white; }
+a:visited { text-decoration: none; color: white; }
+a:hover { text-decoration: none; color: white; }
+a:active { text-decoration: none; color: white; }
+
+.shader {
+    box-shadow: inset 0 0 10px black;
+    border-radius:  12px;           /*Ronde randen*/
+    position: absolute;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    width:          50%;
+    right:          20px;
+    margin-left:    25px;
+    margin-top:     20px;
+    display:        inline-block;
+}
+
+IMG.sizer {
+    box-shadow: inset 0 0 10px black;
+    border-radius:  12px;           /*Ronde randen*/
+    position: relative;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    display:        inline-block;
+    z-index: -3;
+}
+
+@media (max-width: 670px) {
+.shader {
+    margin-top:     20px;
+    width:          97%;
+    position:       relative;
+    
+}
+}
